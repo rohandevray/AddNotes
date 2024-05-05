@@ -2,8 +2,10 @@ import axios from "axios"
 import { ACCESS_TOKEN } from "./constants"
 
 
+const apiUrl = "/choreo-apis/addnotes/backend/rest-api-be2/v1"
+
 const api = axios.create({
-     baseURL: import.meta.env.VITE_API_URL
+     baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl ,
 })
 
 //way of providing authorization everytime we make a request
